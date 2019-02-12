@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+         "-//Apache Struts//XWork Validator 1.0.3//EN"
+           "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+           
+           
+<validators>
+<field name="username">
+<field-validator type="requiredstring">
+<message>用戶名不可為空</message>
+</field-validator>
+<field-validator type="stringlength">
+<param name="minLength">5</param>
+<param name="maxLength">32</param>
+<message>用戶名長度需要在${minLength}與${maxLength}之間</message>
+</field-validator>
+</field>
+
+<field name="password">
+<field-validator type="requiredstring">
+<message>密碼不能為空</message>
+</field-validator>
+<field-validator type="stringlength">
+<param name="minLength">6</param>
+<message>密碼長度需要在${minLength}位以上</message>
+</field-validator>
+</field>
+
+<field name="repassword">
+<field-validator type="requiredstring" short-circuit="true">
+<message>確認密碼不能為空</message>
+</field-validator>
+<field-validator type="fieldexpression">
+<param name="expression">password==repassword</param>
+<message>兩次密碼不一致</message>
+</field-validator>
+</field>
+
+<field name="email">
+<field-validator type="requiredstring">
+<message>E-mail不能為空</message>
+</field-validator>
+<field-validator type="email">
+<message>E-mail格式不正確</message>
+</field-validator>
+</field>
+
+</validators>

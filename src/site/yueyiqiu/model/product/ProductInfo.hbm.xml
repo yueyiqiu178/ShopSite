@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="site.yueyiqiu.model.product.ProductInfo" table="tb_productinfo">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="description" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+            <column name="createTime" />
+        </property>
+        <property name="basePrice" type="double">
+            <column name="baseprice" />
+        </property>
+        <property name="marketPrice" type="double">
+            <column name="marketprice" />
+        </property>
+        <property name="salePrice" type="double">
+            <column name="sellprice" />
+        </property>
+        <property name="commend" type="boolean">
+            <column name="commend" />
+        </property>
+        <property name="sexrequest" type="site.yueyiqiu.util.hibernate.SexType">
+            <column name="sexrequest" />
+        </property>
+        <property name="clickCount" type="int">
+            <column name="clickcount" />
+        </property>
+        <property name="sellCount" type="int">
+            <column name="sellcount" />
+        </property>
+        
+        <many-to-one name="category" column="categoryId" class="site.yueyiqiu.model.product.ProductCategory" cascade="save-update" outer-join="true" lazy="false">
+            
+        </many-to-one>
+        <many-to-one name="uploadfile" column="uploadFile" class="site.yueyiqiu.model.product.UploadFile" cascade="all" outer-join="true">
+           
+        </many-to-one>
+    </class>
+</hibernate-mapping>

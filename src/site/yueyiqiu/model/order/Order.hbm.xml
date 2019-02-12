@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013/12/1 ?W?? 11:25:13 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="site.yueyiqiu.model.order.Order" table="tb_order">
+        <id name="orderId" type="java.lang.String">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="customer" class="site.yueyiqiu.model.user.Customer" fetch="join">
+            <column name="customerId" />
+        </many-to-one>
+        <property name="name" type="java.lang.String">
+            <column name="name" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="address" />
+        </property>
+        <property name="mobile" type="java.lang.String">
+            <column name="mobile" />
+        </property>
+        <set name="orderItems" table="tb_orderitem" inverse="true" lazy="extra" cascade="save-update">
+            <key>
+                <column name="id" />
+            </key>
+            <one-to-many class="site.yueyiqiu.model.order.OrderItem" />
+        </set>
+        <property name="totalPrice" type="double">
+            <column name="totalPrice" />
+        </property>
+        <property name="paymentWay" type="site.yueyiqiu.util.hibernate.PaymentWayType">
+            <column name="paymentWay" />
+        </property>
+        <property name="orderState" type="site.yueyiqiu.util.hibernate.OrderStateType">
+            <column name="orderState" />
+        </property>
+        <property name="createtime" type="java.util.Date">
+            <column name="createTime" />
+        </property>
+    </class>
+</hibernate-mapping>

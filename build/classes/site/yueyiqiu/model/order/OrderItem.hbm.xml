@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013/12/1 ?W?? 11:25:13 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="site.yueyiqiu.model.order.OrderItem" table="tb_orderitem">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="productId" type="int">
+            <column name="productId" />
+        </property>
+        <property name="productName" type="java.lang.String">
+            <column name="productName" />
+        </property>
+        <property name="productPrice" type="double">
+            <column name="productPrice" />
+        </property>
+        <property name="amount" type="int">
+            <column name="amount" />
+        </property>
+        <many-to-one name="order" class="site.yueyiqiu.model.order.Order" lazy="false" cascade="save-update">
+            <column name="orderId" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

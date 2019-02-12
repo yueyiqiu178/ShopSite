@@ -1,0 +1,386 @@
+*{
+	padding: 0;
+	
+	margin: 0;
+	
+}
+
+#box{
+	height: auto;
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+#dark{
+	background-color:#f1f1f1;
+	height: 21px;
+	width:870px;
+	text-align: right; 
+	
+}
+
+
+#logo{
+	
+	height: 60px;
+	width: 604px;
+	
+}
+
+
+#sou{
+	height: 40px;
+	width: 350px;
+	float: left;
+	
+}
+
+
+#sou input{
+	height: 30px;
+	width: 345px;
+	float: left;
+	
+}
+
+#sou_zi{
+	
+	width: 78px;
+	float: left;
+	
+}
+
+
+#sou_zi01{
+	
+	width: 100px;
+	float: left;
+	
+}
+
+
+#menu{
+	
+	width: 900px;
+	height: 33px;
+	background-image: url(../images/index_17.gif);
+	
+}
+
+
+#left{
+	
+	float: left;
+	height: auto;
+	width: 678px;
+	
+}
+
+
+
+#right{
+	
+	float: left;
+	height: auto;
+	width: 205px;
+	
+}
+
+
+#left_s01{
+	
+	float: left;
+	height: 245px;
+	width: 182px;
+	
+	
+}
+
+
+#left_s02{
+	
+	float: left;
+	height: 245px;
+	width: 485px;
+	
+}
+
+
+#left_x{
+	
+	float: left;
+	height: auto;
+	width: 678px;
+	
+}
+
+#tableleft{
+	
+	float: left;
+	height: 115px;
+	width: 676px;
+	
+}
+
+
+.wordtitle{
+	
+	font-size: 14px;
+	font-weight: bold;
+	color: #7c6000;
+}
+
+#innerleft{
+	
+	width: 613px;
+	border: 1px solid #999999;
+	
+}
+
+
+#deepleft{
+	
+	white-space:nowrap; 
+	width: 28%;
+}
+
+
+#mid{
+	
+	width: 900px;
+	height: auto;
+	float: left;
+}
+
+
+#denlu{
+	
+	width: 400px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	background-image: url(../images/dl_03.gif);
+	background-repeat:no-repeat;
+}
+
+#zhuce{
+	
+	width: 500px;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	background-image: url(../images/zc_03.gif);
+	background-repeat:no-repeat;
+}
+
+.cell{
+	
+	font-size: 12px;
+	border: 1px solid #999999; 
+	color: #000000;
+}
+
+#right_sp{
+	
+	width: 676px;
+	height: auto;
+	float: left;
+	border: 1px solid black;
+	
+	
+}
+
+
+#product{
+	
+	
+}
+
+#zitao{
+	
+	
+}
+
+
+#cart_left{
+	
+	width: 193px;
+	height: 415px;
+	float: left;
+	border: 1px solid #999999;
+	background-image: url(../images/zh_03.gif);
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: #e7f3c3;
+	padding-top: 55px;
+	margin: 3px;
+}
+
+
+
+#cart_right{
+	
+	width: 688px;
+	height: 470px;
+	float: left;
+	margin-top: 3px;
+}
+
+
+#left_list{
+	
+	width:150px;
+	height: 31px;
+	background-image: url(../images/zh01_07.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	
+	padding-left: 34px;
+	line-height: 30px;
+	margin-left: 4px;
+}
+
+
+#right_title{
+	
+	width: 688px;
+	height: 40px;
+	border-bottom: 2px dashed #728800;
+	font-size: 16px;
+	font-weight: bold;
+	color: #728800;
+	text-align: center;
+}
+
+
+#right_content{
+	
+	
+}
+
+
+#itemcontent{
+	
+	width: 688px;
+	height: auto;
+	border-bottom: 1px dashed #999999;
+	
+}
+
+
+
+#ban{
+	
+	width: 688px;
+	
+	
+}
+
+#ban01,#ban01,#ban03,#ban04{
+	
+	
+	width: 688px;
+	height: auto;
+	margin-bottom: 10px;
+	border-bottom: 1px dashed #999999;
+	
+}
+
+
+#ban05{
+	
+	
+	width: 688px;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+#order_left{
+	
+	width: 197px;
+	height: 415px;
+	float: left;
+	background-image: url("../images/zh_03.gif");
+	background-repeat: no-repeat;
+	background-position: top;
+	border: 1px solid #999999;;
+	margin: 5px;
+	padding-top: 55px;
+	background-color: #e7f3c3;
+}
+
+
+#order_right{
+	
+	width: 688px;
+	height: 470px;
+	float: left;
+	
+}
+
+
+#order_left_list{
+	
+	width: 150px;
+	height: 30px;
+	background-image: url("../images/zh01_07.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-left: 4px;
+	padding-left: 33px;
+	line-height: 31px;
+}
+
+
+#right_title{
+	
+	width: 670px;
+	height: 40px;
+	border-bottom-style: dashed;
+	border-bottom-width: 2px;
+	border-bottom-color: #728800;
+	font-size: 18px;
+	font-weight: bold;
+	color: #728800;
+
+	line-height: 40px;
+}
+
+.yellow{
+	
+	font-size: 12px;
+	font-weight: bold;
+	color: #746a00;
+}
+
+
+#innertable{
+	
+	width: 688px;
+	border-bottom: 1px dashed #999999;
+}
+
+
+.red{
+	
+	color: red;
+	font-size: 16px;
+}
+
+#message_title{
+	
+	width: 688px;
+	height: 40px;
+	
+	border-top:2px dashed #728800;
+	font-size: 16px;
+	font-weight: bold;
+	color: #728800;
+	text-align: center;
+	line-height: 35px;
+	margin-top: 5px;
+}

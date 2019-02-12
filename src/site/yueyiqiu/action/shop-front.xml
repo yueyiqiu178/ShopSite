@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+
+
+<package name="shop-front" extends="shop-default">
+
+<action name="index" class="indexAction">
+
+<result>/pages/index.jsp</result>
+
+</action>
+
+</package>
+
+
+<package name="shop-customer" extends="shop-default" namespace="/customer">
+
+<action name="customer_*" method="{1}" class="customerAction">
+
+<result name="input">/pages/user/customer_reg.jsp</result>
+
+</action>
+</package>
+
+<package name="shop-product" extends="shop-default" namespace="/product">
+<action name="product_*" class="productAction" method="{1}">
+
+<result name="list">/pages/product/product_list.jsp</result>
+<result name="select">/pages/product/product_select.jsp</result>
+<result name="clicklist">/pages/product/product_click_list.jsp</result>
+<result name="findlist">/pages/product/product_find_list.jsp</result>
+<result name="commend">/pages/product/product_list_commend.jsp</result>
+<result name="sell">/pages/product/product_list_sell.jsp</result>
+<result name="enjoy">/pages/product/product_list_enjoy.jsp</result>
+
+
+</action>
+</package>
+
+<package name="shop-cart" extends="shop-front">
+<action name="cart_*" class="cartAction" method="{1}">
+<result name="list">/pages/cart/cart_list.jsp</result>
+</action>
+</package>
+
+<package name="shop-order" extends="shop-front">
+<action name="order_*" class="orderAction" method="{1}">
+
+<result name="add">/pages/order/order_add.jsp</result>
+<result name="confirm">/pages/order/order_confirm.jsp</result>
+<result name="list">/pages/order/order_list.jsp</result>
+<result name="error">/pages/order/order_error.jsp</result>
+
+</action>
+</package>
+
+</struts>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+	
+	<struts>
+	
+	<package name="shop-admin" extends="shop-default" namespace="/admin">
+	
+	<action name="admin_*" class="indexAction" method="{1}">
+	
+	<result name="top">/pages/admin/top.jsp</result>
+	<result name="left">/pages/admin/left.jsp</result>
+	<result name="right">/pages/admin/right.jsp</result>
+	
+	</action>
+	</package>
+	
+	<package name="shop-admin-user" extends="shop-default" namespace="/admin/user">
+	
+	<action name="user_*" class="userAction" method="{1}">
+	</action>
+	
+	</package>
+	
+	<package name="shop-admin-category" namespace="/admin/product" extends="shop-admin">
+	
+	<action name="category_*" class="productCategoryAction" method="{1}">
+	
+	<result name="input">/pages/admin/product/category_add.jsp</result>
+	<result name="list">/pages/admin/product/category_list.jsp</result>
+	<result name="edit">/pages/admin/product/category_edit.jsp</result>
+	
+	
+	
+	</action>
+	
+	</package>
+	
+	<package name="shop-admin-product" namespace="/admin/product" extends="shop-admin">
+	<action name="product_*" class="productAction" method="{1}">
+	
+	<result name="list">/pages/admin/product/product_list.jsp</result>
+	<result name="input">/pages/admin/product/product_add.jsp</result>
+	<result name="edit">/pages/admin/product/product_edit.jsp</result>
+	
+	</action>
+	</package>
+	
+	<package name="shop-admin-order" namespace="/admin/product" extends="shop-admin">
+	
+	
+	<action name="order_*" class="orderAction" method="{1}">
+		<result name="list">/pages/admin/order/order_list.jsp</result>
+		<result name="select">/pages/admin/order/order_select.jsp</result>
+		<result name="query">/pages/admin/order/order_query.jsp</result>
+		<result name="update">/pages/admin/order/order_update_success.jsp</result>
+	</action>
+	
+	</package>
+	
+	
+	</struts>
